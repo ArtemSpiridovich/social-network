@@ -13,3 +13,9 @@
 .content img {
     width: 800px;
 }
+
+.contentnav {
+
+    grid-area: c;
+    background-color: darkorange;
+}
