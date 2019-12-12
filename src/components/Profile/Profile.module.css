@@ -1,0 +1,24 @@
+.content {
+    grid-area: c;
+    background-color: #92c3ff;
+    display: flex;
+    flex-direction: column;
+}
+
+.content img {
+    align-self: center;
+}
+
+.contentnav
+{
+
+    grid-area: c;
+    background-color: darkslateblue;
+}
+
+
+
+.content.ava {
+    width: 150px;
+    height: 150px;
+}

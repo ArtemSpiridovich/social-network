@@ -1,0 +1,24 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+}
+
+.like {
+    align-self: flex-end;
+}
+
+
+.post img{
+    width: 30px;
+    border-radius: 50%;
+}
+.line{
+    background-color: black;
+    height: 2px;
+}

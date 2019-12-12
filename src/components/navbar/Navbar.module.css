@@ -1,0 +1,14 @@
+.nav {
+    grid-area: n;
+    background-color: lightskyblue;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item {
+    color: black;
+}
+
