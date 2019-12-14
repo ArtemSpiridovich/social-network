@@ -1,3 +1,8 @@
 .posts {
     color: black;
 }
+
+.newpost {
+    padding-left: 6.5%;
+    padding-bottom: 10px;
+}
