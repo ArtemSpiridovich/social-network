@@ -3,11 +3,12 @@ import s from './Profile.module.css';
 import MyPosts from "./myposts/MyPosts";
 import Avatar from "./Ava/Avatar";
 
-const Profile = () => {
+const Profile = (props) => {
+    debugger
     return (
             <div className={s.content}>
                 <Avatar/>
-                <MyPosts/>
+                <MyPosts posts={props.posts}/>
             </div>
     );
 }

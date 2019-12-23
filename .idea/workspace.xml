@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a498fd62-2d27-4a3b-822e-271d24a15050" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Ava/Avatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Ava/Avatar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Ava/Avatar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Ava/Avatar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ToDoList" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -97,7 +100,8 @@
       <workItem from="1576317625042" duration="1855000" />
       <workItem from="1577002729977" duration="8110000" />
       <workItem from="1577039363185" duration="1483000" />
-      <workItem from="1577089241502" duration="358000" />
+      <workItem from="1577089241502" duration="445000" />
+      <workItem from="1577097219801" duration="5337000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-14">
       <created>1576087263937</created>
@@ -120,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577004641076</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" lesson-25">
+      <created>1577089683372</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577089683372</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,21 +154,23 @@
     <MESSAGE value="lesson-14" />
     <MESSAGE value="lesson-17" />
     <MESSAGE value=" lesson-24" />
-    <option name="LAST_COMMIT_MESSAGE" value=" lesson-24" />
+    <MESSAGE value=" lesson-25" />
+    <option name="LAST_COMMIT_MESSAGE" value=" lesson-25" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576245979069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576245979069" />
-    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1577004637900">
+    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1577089680733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1577004637900" />
+    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1577089680733" />
     <state x="585" y="110" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576269527179" />
-    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1576251529973">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="493" y="171" key="FileChooserDialogImpl" timestamp="1577103655086">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="493" y="171" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1577103655086" />
     <state x="739" y="261" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576251529973" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1576266352631">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -168,5 +181,9 @@
     </state>
     <state x="368" y="141" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1577089666189" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576269540589" />
+    <state x="181" y="32" width="670" height="676" key="search.everywhere.popup" timestamp="1577103558632">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="181" y="32" width="670" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1577103558632" />
   </component>
 </project>
