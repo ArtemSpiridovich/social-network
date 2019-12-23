@@ -4,7 +4,7 @@ import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 
 const Dialogs = () => {
-    let dialogsData = [
+    let dialogs = [
         {id:1, name: 'Dimych'},
         {id:2, name: 'Andrey'},
         {id:3, name: 'Svetka'},
@@ -12,27 +12,24 @@ const Dialogs = () => {
         {id:5, name: 'Victor'},
         {id:6, name: 'Valera'}
     ];
-    let messagesData = [
-        {mesage: 'Hi'},
-        {mesage: 'How are you?'},
-        {mesage: 'What do you?'},
-        {mesage: 'Yoooooooooo'}
+
+    let dialogElement = dialogs.map(d => <Dialog name={d.name} id={d.id}/>)
+
+    let messages = [
+        {id: 1, mesage: 'Hi'},
+        {id: 2, mesage: 'How are you?'},
+        {id: 3, mesage: 'What do you?'},
+        {id: 4, mesage: 'Yoooooooooo'}
     ];
+
+    let messageElement = messages.map(m => <Message message={m.mesage} id={m.id}/>)
     return (
             <div className={s.dialogs}>
                 <div className={s.dialogsitems}>
-                    <Dialog name={dialogsData[0].name} id={dialogsData[0].id}/>
-                    <Dialog name={dialogsData[1].name} id={dialogsData[1].id}/>
-                    <Dialog name={dialogsData[2].name} id={dialogsData[2].id}/>
-                    <Dialog name={dialogsData[3].name} id={dialogsData[3].id}/>
-                    <Dialog name={dialogsData[4].name} id={dialogsData[4].id}/>
-                    <Dialog name={dialogsData[5].name} id={dialogsData[5].id}/>
+                    {dialogElement}
                 </div>
                 <div className={s.messages}>
-                    <Message message={messagesData[0].mesage}/>
-                    <Message message={messagesData[1].mesage}/>
-                    <Message message={messagesData[2].mesage}/>
-                    <Message message={messagesData[3].mesage}/>
+                    {messageElement}
                 </div>
             </div>
     );

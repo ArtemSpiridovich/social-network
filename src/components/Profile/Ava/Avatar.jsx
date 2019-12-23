@@ -5,7 +5,7 @@ const Avatar = () => {
     return (
             <div className={s.content}>
                 <img src='https://99px.ru/sstorage/53/2013/12/tmb_91205_3821.jpg'/>
-                <div>
+                <div className={s.ava}>
                     ava + description
                 </div>
             </div>
