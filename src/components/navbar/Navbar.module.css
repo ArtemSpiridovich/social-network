@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
-    height: 300px;
+    height: 400px;
 }
 
 .item a {
@@ -15,4 +15,8 @@
 
 .item a.active {
     color: red;
+}
+
+.sidebar {
+    margin-top: 40px;
 }

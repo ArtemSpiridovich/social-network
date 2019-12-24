@@ -1,0 +1,12 @@
+.message {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.disk {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}

@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1.5fr 10.5fr;
+    grid-template-columns: 4fr 8fr;
 }
 
 
