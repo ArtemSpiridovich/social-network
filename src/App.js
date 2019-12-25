@@ -11,7 +11,6 @@ import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
             <div className='app-wrapper'>
                 <div className='lineup'>
                 </div>
@@ -27,7 +26,6 @@ const App = (props) => {
                     <Route exact path='/Settings' render={Settings}/>
                 </div>
             </div>
-        </BrowserRouter>
     );
 }
 

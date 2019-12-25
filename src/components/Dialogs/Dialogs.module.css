@@ -1,6 +1,21 @@
 .dialogs {
-    display: grid;
-    grid-template-columns: 4fr 8fr;
+    display: flex;
+}
+
+.messageData{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.dialogsitems {
+    width: 30%;
+}
+
+.newMessage {
+    display: flex;
+    height: 5vh;
+    align-self: center;
 }
 
 

@@ -1,9 +1,9 @@
 let state = {
     profilePage: {
         posts: [
-            {message: 'Hi, how are you?', likesCount: 0},
-            {message: 'What do you?', likesCount: 24},
-            {message: 'yoooooooooooooooo', likesCount: 166},
+            {id: 1, message: 'Hi, how are you?', likesCount: 0},
+            {id: 2, message: 'What do you?', likesCount: 24},
+            {id: 3, message: 'yoooooooooooooooo', likesCount: 166},
         ]
     },
     dialogsPage: {
