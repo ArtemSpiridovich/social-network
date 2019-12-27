@@ -8,6 +8,8 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
+import {addMessage} from "./redux/state";
+import {updateNewTextPost} from "./redux/state";
 
 const App = (props) => {
     return (
@@ -18,9 +20,9 @@ const App = (props) => {
                 <Navbar sidebar={props.state.sidebar}/>
                 <div className='app-wrapper-content'>
                     <Route exact path='/Profile'
-                           render={()=> <Profile state={props.state.profilePage}/> }/>
+                           render={()=> <Profile state={props.state.profilePage} addPost={props.addPost} updateNewTextPost={updateNewTextPost}/>}/>
                     <Route exact path='/Dialogs'
-                           render={()=> <Dialogs state={props.state.dialogsPage}/>}/>
+                           render={()=> <Dialogs state={props.state.dialogsPage} addNewMessage={addMessage}/>}/>
                     <Route exact path='/News' render={News}/>
                     <Route exact path='/Music' render={Music}/>
                     <Route exact path='/Settings' render={Settings}/>

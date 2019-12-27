@@ -8,10 +8,9 @@ const Dialogs = (props) => {
     let messageElements = props.state.messages.map(m => <Message message={m.message} id={m.id}/>)
     let newTextMessage = React.createRef();
     let addNewMessage = () => {
-        let textMessage = newTextMessage.current.value;
-        newTextMessage.current.value = '';
-
+        props.addNewMessage();
     }
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsitems}>

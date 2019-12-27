@@ -5,6 +5,7 @@
 .messageData{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 70%;
 }
 
@@ -15,8 +16,16 @@
 .newMessage {
     display: flex;
     height: 5vh;
+    width: 90%;
     align-self: center;
 }
 
+.newMessage textarea {
+    width: 90%;
+}
+
+.newMessage button {
+    width: 10%;
+}
 
 
