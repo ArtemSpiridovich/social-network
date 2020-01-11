@@ -7,3 +7,15 @@
     padding-left: 20px;
 }
 
+.ava img {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.ava {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
