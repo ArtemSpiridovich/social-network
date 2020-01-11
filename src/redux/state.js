@@ -1,4 +1,5 @@
-import renderentirethree from './../render.js'
+let renderentirethree
+
 
 let state = {
     profilePage: {
@@ -23,7 +24,8 @@ let state = {
             {id: 2, message: 'How are you?'},
             {id: 3, message: 'What do you?'},
             {id: 4, message: 'Yoooooooooo'}
-        ]
+        ],
+        newTextMessage: 'Hello'
     },
     newPage: {},
     musicPage: {},
@@ -34,6 +36,7 @@ let state = {
         {name: 'Valera'}
     ]
 }
+
 
 export let addPost = () => {
     let post = {
@@ -51,13 +54,23 @@ export let updateNewTextPost = (newText) => {
     renderentirethree(state);
 }
 
-export let addMessage = (newMesage) => {
+export let addMessage = () => {
     let message = {
         id: 5,
-        message: newMesage
+        message: state.dialogsPage.newTextMessage
     }
-    state.dialogsPage.messages.push(message)
+    state.dialogsPage.messages.push(message);
+    state.dialogsPage.newTextMessage = '';
     renderentirethree(state);
+}
+
+export let updateNewTextMessage = (newMessage) => {
+    state.dialogsPage.newTextMessage = newMessage;
+    renderentirethree(state);
+}
+
+export let subscribes = (observe) => {
+    renderentirethree = observe
 }
 
 

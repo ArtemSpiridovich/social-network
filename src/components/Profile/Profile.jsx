@@ -7,9 +7,10 @@ const Profile = (props) => {
     return (
             <div className={s.content}>
                 <Avatar/>
-                <MyPosts posts={props.state} addPost={props.addPost}/>
+                <MyPosts posts={props.state} addPost={props.addPost} updateNewTextPost={props.updateNewTextPost}/>
             </div>
     );
 }
 
 export default Profile;
+
