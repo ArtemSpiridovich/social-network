@@ -2,19 +2,8 @@ import React from "react";
 import s from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
+import {addNewMessageCreator, onMessageChangeCreator} from "../../redux/state";
 
-const addNewMessageCreator = () => {
-    return {
-        type: 'ADD-MESSAGE'
-    }
-}
-
-const onMessageChangeCreator = (newMessage) => {
-    return {
-        type: 'UPDATE-NEW-TEXT-MESSAGE',
-        newMessage: newMessage
-    }
-}
 
 const Dialogs = (props) => {
     let dialogElements = props.state.dialogs.map(d => <Dialog name={d.name} id={d.id}/>)

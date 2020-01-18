@@ -1,3 +1,9 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_TEXT_MESSAGE = 'UPDATE-NEW-TEXT-MESSAGE';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_TEXT_POST = 'UPDATE-NEW-TEXT-POST';
+
+
 let store = {
     _state: {
         profilePage: {
@@ -67,6 +73,31 @@ let store = {
             this._state.dialogsPage.newTextMessage = action.newMessage;
             this._renderentirethree(this._state);
         }
+    }
+}
+
+export const addNewMessageCreator = () => {
+    return {
+        type: ADD_MESSAGE
+    }
+}
+export const onMessageChangeCreator = (newMessage) => {
+
+    return {
+        type: UPDATE_NEW_TEXT_MESSAGE,
+        newMessage: newMessage
+    }
+}
+export const addNewPostCreator = () => {
+    return {
+        type: ADD_POST
+    }
+
+}
+export const onPostChangeCreator = (newText) => {
+    return {
+        type: UPDATE_NEW_TEXT_POST,
+        newText: newText
     }
 }
 
