@@ -1,77 +1,105 @@
-let renderentirethree
-
-
-let state = {
-    profilePage: {
-        posts: [
-            {id: 1, message: 'Hi, how are you?', likesCount: 0},
-            {id: 2, message: 'What do you?', likesCount: 24},
-            {id: 3, message: 'yoooooooooooooooo', likesCount: 166},
-        ],
-        newTextPost: 'it-incubator.com'
+let store = {
+    _state: {
+        profilePage: {
+            posts: [
+                {id: 1, message: 'Hi, how are you?', likesCount: 0},
+                {id: 2, message: 'What do you?', likesCount: 24},
+                {id: 3, message: 'yoooooooooooooooo', likesCount: 166},
+            ],
+            newTextPost: 'it-incubator.com'
+        },
+        dialogsPage: {
+            dialogs: [
+                {id: 1, name: 'Dimych'},
+                {id: 2, name: 'Andrey'},
+                {id: 3, name: 'Svetka'},
+                {id: 4, name: 'Diana'},
+                {id: 5, name: 'Victor'},
+                {id: 6, name: 'Valera'}
+            ],
+            messages: [
+                {id: 1, message: 'Hi',},
+                {id: 2, message: 'How are you?'},
+                {id: 3, message: 'What do you?'},
+                {id: 4, message: 'Yoooooooooo'}
+            ],
+            newTextMessage: 'Hello'
+        },
+        newPage: {},
+        musicPage: {},
+        settingPage: {},
+        sidebar: [
+            {name: 'Dmitry'},
+            {name: 'Sveta'},
+            {name: 'Valera'}
+        ]
     },
-    dialogsPage: {
-        dialogs: [
-            {id: 1, name: 'Dimych'},
-            {id: 2, name: 'Andrey'},
-            {id: 3, name: 'Svetka'},
-            {id: 4, name: 'Diana'},
-            {id: 5, name: 'Victor'},
-            {id: 6, name: 'Valera'}
-        ],
-        messages: [
-            {id: 1, message: 'Hi',},
-            {id: 2, message: 'How are you?'},
-            {id: 3, message: 'What do you?'},
-            {id: 4, message: 'Yoooooooooo'}
-        ],
-        newTextMessage: 'Hello'
+    _renderentirethree() {},
+    getState() {
+        return this._state
     },
-    newPage: {},
-    musicPage: {},
-    settingPage: {},
-    sidebar: [
-        {name: 'Dmitry'},
-        {name: 'Sveta'},
-        {name: 'Valera'}
-    ]
+    // addPost ()  {
+    //     let post = {
+    //         id: 5,
+    //         message: this._state.profilePage.newTextPost,
+    //         likesCount: 0
+    //     }
+    //     this._state.profilePage.posts.push(post);
+    //     this._state.profilePage.newTextPost = '';
+    //     debugger
+    //     this._renderentirethree(this._state);
+    // },
+    // updateNewTextPost(newText) {
+    //     this._state.profilePage.newTextPost = newText;
+    //     this._renderentirethree(this._state);
+    // },
+    // addMessage() {
+    //     let message = {
+    //         id: 5,
+    //         message: this._state.dialogsPage.newTextMessage
+    //     };
+    //     this._state.dialogsPage.messages.push(message);
+    //     this._state.dialogsPage.newTextMessage = '';
+    //     this._renderentirethree(this._state);
+    // },
+    // updateNewTextMessage(newMessage) {
+    //     this._state.dialogsPage.newTextMessage = newMessage;
+    //     this._renderentirethree(this._state);
+    // },
+    // subscribers(observe) {
+    //     this._renderentirethree = observe
+    // },
+    dispatch (action) {
+        if(action.type === 'ADD-POST') {
+            let post = {
+                id: 5,
+                message: this._state.profilePage.newTextPost,
+                likesCount: 0
+            }
+            this._state.profilePage.posts.push(post);
+            this._state.profilePage.newTextPost = '';
+            debugger
+            this._renderentirethree(this._state);
+        } else if (action.type === 'UPDATE-NEW-TEXT-POST') {
+            this._state.profilePage.newTextPost = newText;
+            this._renderentirethree(this._state);
+        } else if(action.type === 'ADD-MASSEGE') {
+            let message = {
+                id: 5,
+                message: this._state.dialogsPage.newTextMessage
+            };
+            this._state.dialogsPage.messages.push(message);
+            this._state.dialogsPage.newTextMessage = '';
+            this._renderentirethree(this._state);
+        } else if (action.type === 'UPDATE-NEW-TEXT-MESSAGE') {
+            this._state.dialogsPage.newTextMessage = newMessage;
+            this._renderentirethree(this._state);
+        } else if (action.type === 'SUBSCRIBERS') {
+
+        }
+
+}
 }
 
-
-export let addPost = () => {
-    let post = {
-        id: 5,
-        message: state.profilePage.newTextPost,
-        likesCount: 0
-    }
-    state.profilePage.posts.push(post);
-    state.profilePage.newTextPost = '';
-    renderentirethree(state);
-}
-
-export let updateNewTextPost = (newText) => {
-    state.profilePage.newTextPost = newText;
-    renderentirethree(state);
-}
-
-export let addMessage = () => {
-    let message = {
-        id: 5,
-        message: state.dialogsPage.newTextMessage
-    }
-    state.dialogsPage.messages.push(message);
-    state.dialogsPage.newTextMessage = '';
-    renderentirethree(state);
-}
-
-export let updateNewTextMessage = (newMessage) => {
-    state.dialogsPage.newTextMessage = newMessage;
-    renderentirethree(state);
-}
-
-export let subscribes = (observe) => {
-    renderentirethree = observe
-}
-
-
-export default state;
+export default store
+window.store = store
