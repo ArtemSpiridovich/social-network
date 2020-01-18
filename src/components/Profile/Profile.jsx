@@ -7,7 +7,7 @@ const Profile = (props) => {
     return (
             <div className={s.content}>
                 <Avatar/>
-                <MyPosts posts={props.state} addPost={props.addPost} updateNewTextPost={props.updateNewTextPost}/>
+                <MyPosts posts={props.state} dispatch={props.dispatch}/>
             </div>
     );
 }

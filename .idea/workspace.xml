@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a498fd62-2d27-4a3b-822e-271d24a15050" name="Default Changelist" comment=" lesson-34 work true">
+    <list default="true" id="a498fd62-2d27-4a3b-822e-271d24a15050" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577621669846</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lesson 38 work">
+      <created>1579346963098</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579346963098</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +222,8 @@
     <MESSAGE value=" lesson-30 work" />
     <MESSAGE value=" lesson-34 work" />
     <MESSAGE value=" lesson-34 work true" />
-    <option name="LAST_COMMIT_MESSAGE" value=" lesson-34 work true" />
+    <MESSAGE value="lesson 38 work" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 38 work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576245979069">

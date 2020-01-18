@@ -34,43 +34,16 @@ let store = {
             {name: 'Valera'}
         ]
     },
-    _renderentirethree() {},
+    _renderentirethree() {
+    },
     getState() {
         return this._state
     },
-    // addPost ()  {
-    //     let post = {
-    //         id: 5,
-    //         message: this._state.profilePage.newTextPost,
-    //         likesCount: 0
-    //     }
-    //     this._state.profilePage.posts.push(post);
-    //     this._state.profilePage.newTextPost = '';
-    //     debugger
-    //     this._renderentirethree(this._state);
-    // },
-    // updateNewTextPost(newText) {
-    //     this._state.profilePage.newTextPost = newText;
-    //     this._renderentirethree(this._state);
-    // },
-    // addMessage() {
-    //     let message = {
-    //         id: 5,
-    //         message: this._state.dialogsPage.newTextMessage
-    //     };
-    //     this._state.dialogsPage.messages.push(message);
-    //     this._state.dialogsPage.newTextMessage = '';
-    //     this._renderentirethree(this._state);
-    // },
-    // updateNewTextMessage(newMessage) {
-    //     this._state.dialogsPage.newTextMessage = newMessage;
-    //     this._renderentirethree(this._state);
-    // },
-    // subscribers(observe) {
-    //     this._renderentirethree = observe
-    // },
-    dispatch (action) {
-        if(action.type === 'ADD-POST') {
+    subscribers(observe) {
+        this._renderentirethree = observe
+    },
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
             let post = {
                 id: 5,
                 message: this._state.profilePage.newTextPost,
@@ -78,12 +51,11 @@ let store = {
             }
             this._state.profilePage.posts.push(post);
             this._state.profilePage.newTextPost = '';
-            debugger
             this._renderentirethree(this._state);
         } else if (action.type === 'UPDATE-NEW-TEXT-POST') {
-            this._state.profilePage.newTextPost = newText;
+            this._state.profilePage.newTextPost = action.newText;
             this._renderentirethree(this._state);
-        } else if(action.type === 'ADD-MASSEGE') {
+        } else if (action.type === 'ADD-MESSAGE') {
             let message = {
                 id: 5,
                 message: this._state.dialogsPage.newTextMessage
@@ -92,13 +64,10 @@ let store = {
             this._state.dialogsPage.newTextMessage = '';
             this._renderentirethree(this._state);
         } else if (action.type === 'UPDATE-NEW-TEXT-MESSAGE') {
-            this._state.dialogsPage.newTextMessage = newMessage;
+            this._state.dialogsPage.newTextMessage = action.newMessage;
             this._renderentirethree(this._state);
-        } else if (action.type === 'SUBSCRIBERS') {
-
         }
-
-}
+    }
 }
 
 export default store
