@@ -44,7 +44,7 @@ let store = {
     getState() {
         return this._state
     },
-    subscribers(observe) {
+    subscribe(observe) {
         this._renderentirethree = observe
     },
     dispatch(action) {
