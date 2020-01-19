@@ -1,13 +1,13 @@
 import React from "react";
 import s from './Profile.module.css';
-import MyPosts from "./myposts/MyPosts";
 import Avatar from "./Ava/Avatar";
+import MyPostsContainer from "./myposts/Post/MyPostsContainer";
 
 const Profile = (props) => {
     return (
             <div className={s.content}>
                 <Avatar/>
-                <MyPosts posts={props.state} dispatch={props.dispatch}/>
+                <MyPostsContainer/>
             </div>
     );
 }
