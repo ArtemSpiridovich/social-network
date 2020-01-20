@@ -5,14 +5,14 @@ import App from './App';
 import store from './redux/redux-store'
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from "react-router-dom";
-import StoreContext from "./StoreContext";
+import StoreContext, {Provider} from "./StoreContext";
 
 let rerenderEntireThree = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <StoreContext.Provider value={store}>
+            <Provider store={store}>
                 <App/>
-            </StoreContext.Provider>
+            </Provider>
         </BrowserRouter>, document.getElementById('root'));
 }
 

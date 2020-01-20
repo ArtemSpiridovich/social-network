@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498fd62-2d27-4a3b-822e-271d24a15050" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/myposts/Post/MyPostsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/myposts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Sidebar-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Sidebar-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +122,8 @@
       <workItem from="1578042689878" duration="404000" />
       <workItem from="1578744793442" duration="5581000" />
       <workItem from="1579367798566" duration="21996000" />
-      <workItem from="1579459962959" duration="2967000" />
+      <workItem from="1579459962959" duration="3570000" />
+      <workItem from="1579509204526" duration="1367000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-14">
       <created>1576087263937</created>
@@ -226,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579426975263</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="lesson 44 half">
+      <created>1579462995162</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579462995162</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +257,8 @@
     <MESSAGE value="lesson 38 full" />
     <MESSAGE value="lesson 41" />
     <MESSAGE value="lesson 42" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 42" />
+    <MESSAGE value="lesson 44 half" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 44 half" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576245979069">
