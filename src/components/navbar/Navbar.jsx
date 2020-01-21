@@ -2,13 +2,14 @@ import React from "react";
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
-import StoreContext from "../../StoreContext";
+import Provider from "react-redux/lib/components/Provider";
+import store from "../../redux/redux-store";
+import {connect} from "react-redux";
 
-const Navbar = () => {
-    return <StoreContext.Consumer>
-        {
-            (store) => {
-                let sidebarElements = store.getState().sidebar.map(s => <Sidebar name={s.name}/>)
+const Navbar = (props) => {
+
+                let sidebarElements = props.sidebar.map(s => <Sidebar name={s.name}/>)
+    
                 return (
                     <nav className={s.nav}>
                         <div className={s.item}>
@@ -32,10 +33,13 @@ const Navbar = () => {
                         </div>
                     </nav>
                 );
-            }
-        }
-    </StoreContext.Consumer>
+}
+
+const mapStateToProps = (state) => {
+    return {
+        sidebar: state.sidebar
+    }
 }
 
 
-    export default Navbar;
+    export default connect(mapStateToProps)(Navbar);
