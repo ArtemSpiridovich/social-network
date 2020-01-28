@@ -8,7 +8,7 @@ import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Users from "./components/Users/Users";
+import MyUsersContainer from "./components/Users/UsersContainer";
 
 const App = (props) => {
     console.log(props);
@@ -26,7 +26,7 @@ const App = (props) => {
                 <Route exact path='/News' render={News}/>
                 <Route exact path='/Music' render={Music}/>
                 <Route exact path='/Users'
-                       render={() => <Users/>}/>
+                       render={() => <MyUsersContainer/>}/>
                 <Route exact path='/Settings' render={Settings}/>
             </div>
         </div>
