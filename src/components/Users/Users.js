@@ -3,40 +3,12 @@ import s from "./users.module.css"
 
 const Users = (props) => {
     if(props.users.length===0) {
-        props.setUsers([{
-                id: 1,
-                photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-                followed: true,
-                fullName: 'Dmitry',
-                status: 'I am a boss',
-                location: {city: 'Minsk', country: 'Belarus'}
-            },
-                {
-                    id: 2,
-                    photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-                    followed: true,
-                    fullName: 'Sveta',
-                    status: 'I am a girl',
-                    location: {city: 'Moskow', country: 'Russia'}
-                },
-                {
-                    id: 3,
-                    photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-                    followed: false,
-                    fullName: 'Victor',
-                    status: 'I am a teacher',
-                    location: {city: 'Kiev', country: 'Ukrain'}
-                },
-                {
-                    id: 4,
-                    photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-                    followed: false,
-                    fullName: 'Katya',
-                    status: 'I am a women',
-                    location: {city: 'London', country: 'England'}
-                }
-            ]
-        )
+
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+        .then(responce => {
+            props.setUsers(responce)
+        })
+
     }
     return <div >
         {
