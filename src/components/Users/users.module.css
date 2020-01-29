@@ -1,0 +1,26 @@
+.text {
+    display: flex;
+}
+
+.text span {
+    margin-left: 20px;
+}
+
+.content {
+    display: flex;
+    margin: 15px;
+    align-items: center;
+}
+
+.showmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
