@@ -35,8 +35,8 @@ export const addNewPostCreator = () => {
     return {
         type: ADD_POST
     }
-
 }
+
 export const onPostChangeCreator = (newText) => {
     return {
         type: UPDATE_NEW_TEXT_POST,

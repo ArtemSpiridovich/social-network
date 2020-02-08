@@ -36,7 +36,10 @@ let initialState = {
         //     status: 'I am a women',
         //     location: {city: 'London', country: 'England'}
         // },
-    ]
+    ],
+    pageSize: 5,
+    totalUsersCount: 19,
+    currentPage: 1
 }
 
 const usersReducer = (state = initialState, action) => {
