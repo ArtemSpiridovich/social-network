@@ -1,46 +1,17 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT';
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 let initialState = {
-    users: [
-        // {
-        //     id: 1,
-        //     photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-        //     followed: true,
-        //     fullName: 'Dmitry',
-        //     status: 'I am a boss',
-        //     location: {city: 'Minsk', country: 'Belarus'}
-        // },
-        // {
-        //     id: 2,
-        //     photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-        //     followed: true,
-        //     fullName: 'Sveta',
-        //     status: 'I am a girl',
-        //     location: {city: 'Moskow', country: 'Russia'}
-        // },
-        // {
-        //     id: 3,
-        //     photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-        //     followed: false,
-        //     fullName: 'Victor',
-        //     status: 'I am a teacher',
-        //     location: {city: 'Kiev', country: 'Ukrain'}
-        // },
-        // {
-        //     id: 4,
-        //     photoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsd6IhKO_brDHW6yj-OkYLBt4bzOhpOBn9mvHfBN6qyMk4r7yfjw&s',
-        //     followed: false,
-        //     fullName: 'Katya',
-        //     status: 'I am a women',
-        //     location: {city: 'London', country: 'England'}
-        // },
-    ],
+    users: [],
     pageSize: 5,
     totalUsersCount: 19,
-    currentPage: 1
-}
+    currentPage: 1,
+    isFetching: false
+};
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -49,31 +20,40 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 users: state.users.map(u => {
                     if (u.id === action.userId)
-                        return {...u, followed: true}
+                        return {...u, followed: true};
                     else
                         return u
                 })
-            }
+            };
         case(UNFOLLOW):
             return {
                 ...state,
                 users: state.users.map(u => {
                     if (u.id === action.userId)
-                        return {...u, followed: false}
+                        return {...u, followed: false};
                     else
                         return u
                 })
-            }
+            };
         case(SET_USERS):
-            return {...state, users: [...state.users, ...action.users]}
+            return {...state, users: action.users};
+        case(SET_CURRENT_PAGE):
+            return {...state, currentPage: action.currentPage};
+        case(SET_TOTAL_COUNT):
+            return {...state, totalUsersCount: action.totalCount};
+        case(TOGGLE_IS_FETCHING):
+            return {...state, isFetching: action.isFetching};
         default:
             return state
     }
-}
+};
 
 
-export const followAC = (userId) => ({type: FOLLOW, userId})
-export const unfollowAC = (userId) => ({type: UNFOLLOW, userId})
-export const setUsersAC = (users) => ({type: SET_USERS, users})
+export const followAC = (userId) => ({type: FOLLOW, userId});
+export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
+export const setUsersAC = (users) => ({type: SET_USERS, users});
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalCountAC = (totalCount) => ({type: SET_TOTAL_COUNT, totalCount});
+export const toggleIsFetchingAC = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
 export default usersReducer;

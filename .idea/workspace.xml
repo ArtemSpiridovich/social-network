@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498fd62-2d27-4a3b-822e-271d24a15050" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/user-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Loading/Blocks-1s-200px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Preloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/users.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Profile-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/Users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Users-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,6 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/redux/Users-reducer.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1Un9oJdwiUcllT7ktrcSxD8LVGV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ToDoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../portfolio" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -165,7 +166,7 @@
       <workItem from="1580552639302" duration="2279000" />
       <workItem from="1580584798897" duration="2058000" />
       <workItem from="1580726276337" duration="2419000" />
-      <workItem from="1581083945911" duration="9139000" />
+      <workItem from="1581083945911" duration="31081000" />
     </task>
     <task id="LOCAL-00001" summary="lesson-14">
       <created>1576087263937</created>
@@ -314,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580310259459</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="lesson 55 half">
+      <created>1581167185304</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1581167185304</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +363,8 @@
     <MESSAGE value="lesson 49 start" />
     <MESSAGE value="lesson 50" />
     <MESSAGE value="lesson 51 start" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 51 start" />
+    <MESSAGE value="lesson 55 half" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 55 half" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="286" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1576245979069">
