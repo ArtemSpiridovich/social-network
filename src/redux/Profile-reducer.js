@@ -1,5 +1,6 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_TEXT_POST = 'UPDATE-NEW-TEXT-POST';
+const ADD_POST = 'ADD_POST';
+const UPDATE_NEW_TEXT_POST = 'UPDATE_NEW_TEXT_POST';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 
 let initialState = {
@@ -8,7 +9,8 @@ let initialState = {
         {id: 2, message: 'What do you?', likesCount: 24},
         {id: 3, message: 'yoooooooooooooooo', likesCount: 166},
     ],
-    newTextPost: 'it-incubator.com'
+    newTextPost: 'it-incubator.com',
+    profile: null
 }
 
 
@@ -26,22 +28,15 @@ const profileReducer = (state = initialState, action) => {
         }
         case UPDATE_NEW_TEXT_POST:
             return {...state, newTextPost: action.newText};
+        case SET_USER_PROFILE:
+            return {...state, profile: action.userProfile}
         default:
             return state;
     }
 }
 
-export const addNewPostCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-
-export const onPostChangeCreator = (newText) => {
-    return {
-        type: UPDATE_NEW_TEXT_POST,
-        newText: newText
-    }
-}
+export const onAddPost = () => ({type: ADD_POST})
+export const onPostChange = (newText) => ({type: UPDATE_NEW_TEXT_POST, newText})
+export const setUserProfile = (userProfile) => ({type: SET_USER_PROFILE, userProfile})
 
 export default profileReducer;

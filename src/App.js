@@ -9,6 +9,7 @@ import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import MyUsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 const App = (props) => {
     console.log(props);
@@ -20,7 +21,7 @@ const App = (props) => {
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Route exact path='/Profile'
-                       render={() => <Profile/>}/>
+                       render={() => <ProfileContainer/>}/>
                 <Route exact path='/Dialogs'
                        render={() => <DialogsContainer/>}/>
                 <Route exact path='/News' render={News}/>

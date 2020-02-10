@@ -6,7 +6,7 @@ import MyPostsContainer from "./myposts/Post/MyPostsContainer";
 const Profile = (props) => {
     return (
             <div className={s.content}>
-                <Avatar/>
+                <Avatar profile={props.profile}/>
                 <MyPostsContainer/>
             </div>
     );
