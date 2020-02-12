@@ -9,11 +9,41 @@ const Avatar = (props) => {
     } else {
         return (
             <div className={s.content}>
-                <img src='https://99px.ru/sstorage/53/2013/12/tmb_91205_3821.jpg'/>
+                <img src={props.profile.photos.large}/>
                 <div className={s.ava}>
-                    <img src={props.profile.photos.large}/>
-                    Artem Spirydovich
+                    <img src={props.profile.photos.small}/>
+                    {props.profile.fullName}
                 </div>
+                <span>About me: {props.profile.aboutMe}</span>
+                <ul>
+                    Contacts:
+                    <li>
+                        facebook: {props.profile.contacts.facebook}
+                    </li>
+                    <li>
+                        website: {props.profile.contacts.website}
+                    </li>
+                    <li>
+                        vk: {props.profile.contacts.vk}
+                    </li>
+                    <li>
+                        twitter: {props.profile.contacts.twitter}
+                    </li>
+                    <li>
+                        instagam: {props.profile.contacts.instagam}
+                    </li>
+                    <li>
+                        youtube: {props.profile.contacts.youtube}
+                    </li>
+                    <li>
+                        github: {props.profile.contacts.github}
+                    </li>
+                    <li>
+                        mainLink: {props.profile.contacts.mainLink}
+                    </li>
+                </ul>
+                <div>lookingForAJob: {props.profile.lookingForAJob}</div>
+                <div>lookingForAJobDescription: {props.profile.lookingForAJobDescription}</div>
             </div>
         );
     }
