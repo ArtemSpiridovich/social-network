@@ -1,6 +1,7 @@
 import React from "react";
 import s from './Avatar.module.css';
 import Preloader from "../../../common/Preloader";
+import ProfileStatus from "./ProfileStatus";
 
 const Avatar = (props) => {
 
@@ -14,6 +15,7 @@ const Avatar = (props) => {
                     <img src={props.profile.photos.small}/>
                     {props.profile.fullName}
                 </div>
+                <ProfileStatus status='Hello World!'/>
                 <span>About me: {props.profile.aboutMe}</span>
                 <ul>
                     Contacts:
