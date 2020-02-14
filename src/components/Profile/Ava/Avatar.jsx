@@ -9,7 +9,7 @@ const Avatar = (props) => {
     } else {
         return (
             <div className={s.content}>
-                <img src={props.profile.photos.large}/>
+                {/*<img src={props.profile.photos.large}/>*/}
                 <div className={s.ava}>
                     <img src={props.profile.photos.small}/>
                     {props.profile.fullName}
