@@ -3,24 +3,46 @@ import React, {Component} from "react";
 class ProfileStatus extends Component {
 
     state = {
-        statusValue: '',
+        statusValue: this.props.status === false ? this.props.status : 'status is empty',
         editMode: false
     }
 
-    editStatus = () => {
-        debugger
+    editStatusOn = () => {
+        this.setState({
+            editMode: !this.state.editMode,
+            statusValue: this.props.status
+        })
+    }
+
+    editStatusOff = () => {
+        this.props.updateStatus(this.state.statusValue)
         this.setState({
             editMode: !this.state.editMode
         })
     }
 
+    updateInput = (e) => {
+        let newStatus = e.currentTarget.value
+        this.setState({
+            statusValue: newStatus
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevProps.status !== this.props.status){
+            this.setState({
+                statusValue: this.props.status
+            })
+        }
+    }
+
     render() {
         return (<div>{this.state.editMode
                 ? <div>
-                    <input autoFocus={true} onBlur={this.editStatus} placeholder='write your status...'/>
+                    <input onChange={this.updateInput} autoFocus={true} onBlur={this.editStatusOff} placeholder='write your status...' value={this.state.statusValue}/>
                 </div> :
                 <div >
-                    <span onDoubleClick={this.editStatus}>{this.props.status}</span>
+                    <span onDoubleClick={this.editStatusOn}>{this.state.statusValue === '' ? "your status" : this.props.status}</span>
                 </div>
                 }</div>
         )

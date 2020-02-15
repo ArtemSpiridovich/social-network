@@ -15,7 +15,7 @@ const Avatar = (props) => {
                     <img src={props.profile.photos.small}/>
                     {props.profile.fullName}
                 </div>
-                <ProfileStatus status='Hello World!'/>
+                Status: <ProfileStatus updateStatus={props.updateStatus} status={props.status}/>
                 <span>About me: {props.profile.aboutMe}</span>
                 <ul>
                     Contacts:
