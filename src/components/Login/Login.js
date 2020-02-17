@@ -25,13 +25,12 @@ const LoginReduxForm = reduxForm({
 })(LoginForm)
 
 
-const Login = (props) => {
+const Login = () => {
     const onSubmit = (formData) => {console.log(formData)}
     return <div className={s.loginForm}>
         <h1>Login</h1>
         <LoginReduxForm onSubmit={onSubmit}/>
     </div>
-
 }
 
 export default Login
