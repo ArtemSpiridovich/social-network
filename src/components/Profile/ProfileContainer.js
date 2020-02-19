@@ -20,7 +20,6 @@ class ProfileContainer extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // Typical usage (don't forget to compare props):
         if (this.props.match.params.userId !== prevProps.match.params.userId) {
             let userId = this.props.match.params.userId;
             if (!userId) {
