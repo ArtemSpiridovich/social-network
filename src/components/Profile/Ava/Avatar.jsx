@@ -2,6 +2,7 @@ import React from "react";
 import s from './Avatar.module.css';
 import Preloader from "../../../common/Preloader";
 import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const Avatar = (props) => {
 
@@ -15,7 +16,7 @@ const Avatar = (props) => {
                     <img src={props.profile.photos.small}/>
                     {props.profile.fullName}
                 </div>
-                Status: <ProfileStatus updateStatus={props.updateStatus} status={props.status}/>
+                Status: <ProfileStatusWithHooks updateStatus={props.updateStatus} status={props.status}/>
                 <span>About me: {props.profile.aboutMe}</span>
                 <ul>
                     Contacts:

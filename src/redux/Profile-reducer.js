@@ -1,9 +1,9 @@
 import {profileAPI} from "../api/api";
 
-const ADD_POST = 'ADD_POST';
-const UPDATE_NEW_TEXT_POST = 'UPDATE_NEW_TEXT_POST';
-const SET_USER_PROFILE = 'SET_USER_PROFILE';
-const SET_USER_STATUS = 'SET_USER_STATUS';
+const ADD_POST = 'profile/ADD_POST';
+// const UPDATE_NEW_TEXT_POST = 'UPDATE_NEW_TEXT_POST';
+const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
+const SET_USER_STATUS = 'profile/SET_USER_STATUS';
 
 
 let initialState = {
