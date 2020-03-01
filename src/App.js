@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {Route, withRouter} from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Music from "./components/Music/Music";
 import News from "./components/News/News";
-import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import MyUsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -15,6 +13,9 @@ import {initializeApp} from "./redux/appReducer";
 import Preloader from "./common/Preloader";
 import {compose} from "redux";
 
+const Settings = React.lazy(() => import('./components/Settings/Settings'));
+const Music = React.lazy(() => import('./components/Music/Music'));
+
 class App extends Component {
 
     componentDidMount() {
@@ -22,7 +23,7 @@ class App extends Component {
     }
 
     render() {
-        if(!this.props.initialize){
+        if (!this.props.initialize) {
             return <Preloader/>
         }
         return (
@@ -39,10 +40,20 @@ class App extends Component {
                     <Route path='/login'
                            render={() => <Login/>}/>
                     <Route exact path='/News' render={News}/>
-                    <Route exact path='/Music' render={Music}/>
+                    <Route exact path='/Music'
+                           render={() => {
+                               return <React.Suspense fallback={<div>Loading...</div>}>
+                                   <Music/>
+                               </React.Suspense>
+                           }}/>
                     <Route path='/Users'
                            render={() => <MyUsersContainer/>}/>
-                    <Route exact path='/Settings' render={Settings}/>
+                    <Route exact path='/Settings'
+                           render={() => {
+                               return <React.Suspense fallback={<div>Loading...</div>}>
+                                   <Settings/>
+                               </React.Suspense>
+                           }}/>
                 </div>
             </div>
         );

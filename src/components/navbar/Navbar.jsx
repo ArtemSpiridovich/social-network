@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 
 const Navbar = (props) => {
 
-    let sidebarElements = props.sidebar.map(s => <Sidebar name={s.name}/>)
+    let sidebarElements = props.sidebar.map(s => <Sidebar key={s.name} name={s.name}/>)
 
     return (
         <nav className={s.nav}>

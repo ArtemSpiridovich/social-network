@@ -1,72 +1,20 @@
 import React from "react";
 import s from "./users.module.css";
-import avatar from './../../assets/images/user-5.png'
-import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
-import {toogleFollowingInProgress} from "../../redux/Users-reducer";
+import User from "./User";
+import Pagination from "./Pagination";
+import Preloader from "../../common/Preloader";
 
-const Users = (props) => {
-
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i)
-    }
-
+const Users = ({follow, unfollow, followingInProgress,...props}) => {
     return <div>
-        <div>
-            {
-                pages.map(i => {
-                    return <span onClick={() => {
-                        props.setNewCurrentPage(i)
-                    }} className={props.currentPage === i && s.selectedPage}>{i}</span>
-                })
-            }
-        </div>
-        {
-            props.users.map(u => <div className={s.content} key={u.id}>
-                <span>
-                    <div className={s.photo}>
-                        <NavLink to={'/profile/' + u.id}>
-                            <img src={u.photos.small !== null ? u.photos.small : avatar}/>
-                        </NavLink>
-                    </div>
-                    <div>
-                        {
-                            u.followed
-                                ?
-                                <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {props.unfollow(u.id)}}>
-                                    unFollow
-                                </button>
-                                :
-                                <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {props.follow(u.id)}}>
-                                    Follow
-                                </button>
-                        }
-                    </div>
-                </span>
-                <span className={s.text}>
-                    <span>
-                        <div>
-                            {u.name}
-                        </div>
-                        <div>
-                            {u.status}
-                        </div>
-                    </span>
-                    <span>
-                        <div>
-                            {'u.location.country'}
-                        </div>
-                        <div>
-                            {'u.location.city'}
-                        </div>
-                    </span>
-                </span>
-            </div>)
-        }
-        <button className={s.showmore}>Show more</button>
+        <Pagination {...props}/>
+        {props.isFetching ? <Preloader/> :
+        <div>{
+            props.users.map(u => <User u={u}
+                                       key={u.id}
+                                       follow={follow}
+                                       unfollow={unfollow}
+                                       followingInProgress={followingInProgress}/>)
+        }</div>}
     </div>
 };
 

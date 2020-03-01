@@ -29,19 +29,18 @@ class UsersContainer extends React.Component {
 
     render() {
         return <div>
-            {this.props.isFetching
-                ? <Preloader/>
-                : <Users totalUsersCount={this.props.totalUsersCount}
-                         pageSize={this.props.pageSize}
-                         currentPage={this.props.currentPage}
-                         users={this.props.users}
-                         unfollow={this.props.unfollow}
-                         follow={this.props.follow}
-                         setNewCurrentPage={this.setNewCurrentPage}
-                         toogleFollowingInProgress={this.props.toogleFollowingInProgress}
-                         followingInProgress={this.props.followingInProgress}
-                         getUsers={this.props.getUsers}/>
-            }
+            {/*{this.props.isFetching ? <Preloader/> : ''}*/}
+            <Users totalUsersCount={this.props.totalUsersCount}
+                   pageSize={this.props.pageSize}
+                   currentPage={this.props.currentPage}
+                   users={this.props.users}
+                   unfollow={this.props.unfollow}
+                   follow={this.props.follow}
+                   setNewCurrentPage={this.setNewCurrentPage}
+                   toogleFollowingInProgress={this.props.toogleFollowingInProgress}
+                   followingInProgress={this.props.followingInProgress}
+                   getUsers={this.props.getUsers}
+                   isFetching={this.props.isFetching}/>
         </div>
     }
 }

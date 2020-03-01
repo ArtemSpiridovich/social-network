@@ -9,8 +9,8 @@ import {maxLengthCreator, requiredField} from "../../utils/validators/validators
 const maxLength100 = maxLengthCreator(100);
 
 const Dialogs = (props) => {
-    let dialogElements = props.dialogsPage.dialogs.map(d => <Dialog name={d.name} id={d.id}/>)
-    let messageElements = props.dialogsPage.messages.map(m => <Message message={m.message} id={m.id}/>)
+    let dialogElements = props.dialogsPage.dialogs.map(d => <Dialog key={d.id} name={d.name} id={d.id}/>)
+    let messageElements = props.dialogsPage.messages.map(m => <Message key={m.id} message={m.message} id={m.id}/>)
     let addMessageNew = (formData) => {
         props.onAddMessage(formData.newMessageBody)
     }
